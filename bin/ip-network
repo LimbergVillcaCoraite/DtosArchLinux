@@ -1,0 +1,17 @@
+#!/bin/bash
+
+ip=$(ip a | grep enp2s0 | grep inet)
+
+if [[ $ip != '' ]]; then
+  echo "enp2s0"
+elif [[ $(ip a | grep wlp3s0 | grep inet) != '' ]]; then
+  echo "wlp3s0"
+else
+  echo "lo"
+fi
+#if [  == "inet" ]
+#then
+ # echo 'ip' 
+#else
+#  echo 'else'
+#fi  
