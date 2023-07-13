@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#basic dependencies with Arch-Linux
+#
+installPacman = $(pacman -S dtos-xmonad dtos-xmobar dmenu mpv dmscripts kitty alacritty cmus ranger nvim vim nano python jre-openjdk jdk-openjdk git ueberzug scrcpy virtualbox docker docker-compose pulseaudio-bluetooth obs-studio brightnessctl steam firefox qutebrowser zsh)
+installParu = $(paru -S blkmenu scrub visual-studio-code-bin vmware-workstation hollywood pacmixer i3lock-color-git simple-mtpfs-git anydesk-bin google-chrome)
+
+if [[ $installPacman != '' ]]; then
+  if [[ $installParu != '' ]]; then
+    echo "Finish install"
+    if [[ $(cd $HOME/.local/bin/) != '' ]]; then
+      mkdir -p $HOME/.local/bin
+    else
+      cd $HOME/.local/bin/
+    fi
+    cp -rf $HOME/Documents/git/DtosArchLinux/bin/** $HOME/.local/bin/
+    cp -rf $HOME/Documents/git/DtosArchLinux/.config/** $HOME/.config/
+    cp -rf $HOME/Documents/git/DtosArchLinux/bin/** /usr/bin/
+  fi
+else
+  echo "Error with script"
+fi
+
