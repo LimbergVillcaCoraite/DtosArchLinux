@@ -1,23 +1,28 @@
-![](https://github.com/LimbergVillcaCoraite/projectWeb/blob/9415416cf13c09fa2e42e758f44bba1b61fd5db7/index.html.png)
+![](https://github.com/LimbergVillcaCoraite/DtosArchLinux/blob/main/screen/maim-eDP1-20230713-155834.png)
 
-### Acerca del proyecto
-Proyecto presentado para etapa de desarrollo web
+### About project
+Windows Manager base haskell
 ---
-### Setup
-- Systema operativo: Arch Linux
-- Navegador: Firefox
-- Editor de codigo: Nvim
-- Control de versiones: Github
+### Hardware
+- Computer: Asus k556U
+- Processor: Intel Core i5-7200U
+- Memory: 8GB (DDR4)
+- HDD: 1TB
 
----
-### Tecnologias
-- HTML
-- CSS
+### Booteable usb
+- Pen drive: Sandisk 4GB
 
----
-### Estructura del proyecto
-![](https://i.postimg.cc/02GTc8FY/2023-05-05-H13-38-19-archlinux.png)
----
+### Instructions to boot usb
+1. Download rufus on another computer.
+    Link: https://rufus.ie/es/
+2. Connect Pen Drive.
+3. Open rufus and select according to your preference.
+4. Press start.
+    Reference bootUsb: https://youtu.be/GvI0oyTsuxI
+
+### Instructions to install ArchLinux
+Link: https://wiki.archlinux.org/title/installation_guide
+
 ### Link de figma
 Link: https://www.figma.com/file/CanBImOwOGHBlJufhEXxYp/web?node-id=0%3A1&t=FaXLI8FHZe7yXSe1-1
 ---
