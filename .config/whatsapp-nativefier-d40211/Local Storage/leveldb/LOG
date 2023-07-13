@@ -1,0 +1,6 @@
+2023/07/12-20:11:58.470 2c6c2 Reusing MANIFEST /home/atthort-arch/.config/whatsapp-nativefier-d40211/Local Storage/leveldb/MANIFEST-000001
+2023/07/12-20:11:58.501 2c6c2 Recovering log #3
+2023/07/12-20:11:58.887 2c6c2 Reusing old log /home/atthort-arch/.config/whatsapp-nativefier-d40211/Local Storage/leveldb/000003.log 
+2023/07/12-20:39:18.304 2c749 Level-0 table #5: started
+2023/07/12-20:39:18.402 2c749 Level-0 table #5: 23119 bytes OK
+2023/07/12-20:39:18.439 2c749 Delete type=0 #3

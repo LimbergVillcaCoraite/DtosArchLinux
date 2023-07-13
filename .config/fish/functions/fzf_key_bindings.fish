@@ -1,0 +1,1 @@
+/home/atthort-arch/.fzf/shell/key-bindings.fish
