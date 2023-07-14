@@ -81,6 +81,16 @@ xmonad
 |---------------------------------------------|----------------|
 | mod + enter                                 |  Open terminal |
 | mod + shift + enter                         |  Open Dmenu    |
+| mod + enter + r                             | Restart xmonad |
+| mod + shift + q                             | Power machine  |
+| mod + n                                     |  Open neovim   |
+| mod + shift + 1/9                           |  Send window   |
+| mod + b                                     |Open qutebrowser|
+| mod + r                                     |  Open ranger   |
+| mod + v                                     | Open virtualbox|
+| mod + 1/9                                   |  Switch window |
+| mod + shift + l                             |  Lock screen   |
+| mod + space                                 |  Full screen   |
 
 ---
 kitty
