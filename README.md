@@ -99,6 +99,8 @@ kitty
 |---------------------------------------------|----------------|
 | ctrl + shift + enter                        |Open terminal window|
 | ctrl + shift + z                            |Terminal window full screen|
+| ctrl + shift + w                        |Close terminal full screen|
+| ctrl + shift + q                            |Close terminal|
 
 
 nvchad
