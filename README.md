@@ -18,6 +18,8 @@
 
 ![](https://github.com/LimbergVillcaCoraite/DtosArchLinux/blob/main/screen/maim-eDP1-20230713-155834.png)
 
+<h2 align="center">Configuration</h2>
+<p align="center"> -- Initial --</p>
 ### About project
 Windows Manager base haskell
 ---
