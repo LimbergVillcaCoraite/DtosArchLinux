@@ -27,6 +27,7 @@ Link: https://wiki.archlinux.org/title/installation_guide
 - Enviroment: xmonad, xmobar
 - Menu: dmenu
 - Package manager: pacman, paru
+- Display manager: arandr
 - Multimedia:
     * Video: mpv
     * Music: cmus
@@ -41,6 +42,14 @@ Link: https://wiki.archlinux.org/title/installation_guide
     - Terminal: qutebrowser
 - Smartphone manager: scrcpy
 - Version manager: git
+
+---
+### Basic shortcuts
+xmonad
+kitty
+nvchad
+---
+
 ---
 ### Screenshots
 - Ranger + kitty
