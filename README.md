@@ -20,9 +20,11 @@
 
 <h2 align="center">Configuration</h2>
 <p align="center"> -- Initial --</p>
+
 ### About project
 Windows Manager base haskell
 ---
+
 ### Hardware
 - Computer: Asus k556U
 - Processor: Intel Core i5-7200U
