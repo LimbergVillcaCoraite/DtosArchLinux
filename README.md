@@ -1,5 +1,5 @@
 <div align="center">
-<p><em>Notice: Docs are currently being ported to <a href="https://neshhari.github.io/xmonad-docs/" align="center">[GitHub Pages]</a> (WIP)</em></p>
+<p><em>Enviroment <a href="https://github.com/LimbergVillcaCoraite/DtosArchLinux" align="center">GitHub Repository</a> (GitHub)</em></p>
 
 <h1 align="center">XMonad Starter Kit</h1>
 </div>
