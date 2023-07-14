@@ -106,7 +106,10 @@ kitty
 
 
 nvchad
-
+| Shortcut                                    | Action         |
+|---------------------------------------------|----------------|
+| ctrl + n                        |Open file manager|
+| win + space + v                            |Open terminal|
 
 ---
 ### Screenshots
