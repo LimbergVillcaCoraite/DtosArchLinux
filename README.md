@@ -71,7 +71,9 @@ Link: https://wiki.archlinux.org/title/installation_guide
 - Smartphone manager: scrcpy
 - Version manager: git
 
----
+<h2 align="center">Use</h2>
+<p align="center"> --Shortcuts --</p>
+
 ### Basic shortcuts
 xmonad
 * mod + return      open Terminal
