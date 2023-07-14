@@ -1,5 +1,7 @@
 <div align="center">
-    <p><em>Enviroment <a href="https://github.com/LimbergVillcaCoraite/DtosArchLinux" align="center"GitHub repository></a></em></p>
+<p><em>Notice: Docs are currently being ported to <a href="https://neshhari.github.io/xmonad-docs/" align="center">[GitHub Pages]</a> (WIP)</em></p>
+
+<h1 align="center">XMonad Starter Kit</h1>
 </div>
 ![](https://github.com/LimbergVillcaCoraite/DtosArchLinux/blob/main/screen/maim-eDP1-20230713-155834.png)
 
