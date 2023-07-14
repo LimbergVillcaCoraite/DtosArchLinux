@@ -214,88 +214,75 @@ runSelectedAction' conf actions = do
 
 gsCategories =
   [ ("Games",      "xdotool key super+alt+1")
-  , ("Education",  "xdotool key super+alt+2")
-  , ("Internet",   "xdotool key super+alt+3")
-  , ("Multimedia", "xdotool key super+alt+4")
-  , ("Office",     "xdotool key super+alt+5")
-  , ("Settings",   "xdotool key super+alt+6")
-  , ("System",     "xdotool key super+alt+7")
-  , ("Utilities",  "xdotool key super+alt+8")
+  , ("Internet",   "xdotool key super+alt+2")
+  , ("Multimedia", "xdotool key super+alt+3")
+  , ("Office",     "xdotool key super+alt+4")
+  , ("Settings",   "xdotool key super+alt+5")
+  , ("System",     "xdotool key super+alt+6")
+  , ("Utilities",  "xdotool key super+alt+7")
+  , ("Develop",    "xdotool key super+alt+8")
   ]
 
 gsGames =
-  [ ("0 A.D.", "0ad")
-  , ("Battle For Wesnoth", "wesnoth")
-  , ("OpenArena", "openarena")
-  , ("Sauerbraten", "sauerbraten")
+  [ ("OpenArena", "openarena")
   , ("Steam", "steam")
+  , ("SuperTuxKart", "supertuxkart")
   , ("Unvanquished", "unvanquished")
-  , ("Xonotic", "xonotic-glx")
-  ]
-
-gsEducation =
-  [ ("GCompris", "gcompris-qt")
-  , ("Kstars", "kstars")
-  , ("Minuet", "minuet")
-  , ("Scratch", "scratch")
   ]
 
 gsInternet =
-  [ ("Brave", "brave")
-  , ("Discord", "discord")
-  , ("Element", "element-desktop")
+  [ ("Discord", "discord")
   , ("Firefox", "firefox")
-  , ("LBRY App", "lbry")
-  , ("Mailspring", "mailspring")
-  , ("Nextcloud", "nextcloud")
   , ("Qutebrowser", "qutebrowser")
-  , ("Transmission", "transmission-gtk")
   , ("Zoom", "zoom")
   ]
 
 gsMultimedia =
   [ ("Audacity", "audacity")
   , ("Blender", "blender")
-  , ("Deadbeef", "deadbeef")
+  , ("Cmus", (myTerminal ++ " -e cmus"))
   , ("Kdenlive", "kdenlive")
   , ("OBS Studio", "obs")
-  , ("VLC", "vlc")
   ]
 
 gsOffice =
   [ ("Document Viewer", "evince")
   , ("LibreOffice", "libreoffice")
-  , ("LO Base", "lobase")
-  , ("LO Calc", "localc")
-  , ("LO Draw", "lodraw")
-  , ("LO Impress", "loimpress")
-  , ("LO Math", "lomath")
-  , ("LO Writer", "lowriter")
   ]
 
 gsSettings =
   [ ("ARandR", "arandr")
   , ("ArchLinux Tweak Tool", "archlinux-tweak-tool")
-  , ("Customize Look and Feel", "lxappearance")
   , ("Firewall Configuration", "sudo gufw")
   ]
 
 gsSystem =
   [ ("Alacritty", "alacritty")
   , ("Bash", (myTerminal ++ " -e bash"))
-  , ("Htop", (myTerminal ++ " -e htop"))
+  , ("Bash", (myTerminal ++ " -e bash"))
+  , ("Pacmixer", (myTerminal ++ " -e pacmixer"))
   , ("Fish", (myTerminal ++ " -e fish"))
   , ("PCManFM", "pcmanfm")
   , ("VirtualBox", "virtualbox")
+  , ("VMWare", "vmware")
   , ("Virt-Manager", "virt-manager")
   , ("Zsh", (myTerminal ++ " -e zsh"))
   ]
 
 gsUtilities =
   [ ("Emacs", "emacs")
+  , ("Neovim", (myTerminal ++ " -e nvim"))
   , ("Emacsclient", "emacsclient -c -a 'emacs'")
   , ("Nitrogen", "nitrogen")
   , ("Vim", (myTerminal ++ " -e vim"))
+  ]
+
+gsDevelop =
+  [ ("Visual Studio Code", "code")
+  , ("Neovim", (myTerminal ++ " -e nvim"))
+  , ("Eclipse", "eclipse")
+  , ("Intellij idea", "intellij-idea-ultimate-edition")
+  , ("Postman", "postman")
   ]
 
 myScratchPads :: [NamedScratchpad]
@@ -520,8 +507,12 @@ myKeys c =
   -- (edit shortcuts personal)
   , ("M-<F6>", addName "Bright more"   $ spawn "brightnessctl set +10%")
   , ("M-<F5>", addName "Bright delete"   $ spawn "brightnessctl set 10%-")
+  , ("M-v", addName "Open virtualbox"   $ spawn "virtualbox")
+  , ("M-w", addName "Open vmware"   $ spawn "vmware")
+  , ("M-a", addName "Open arandr"   $ spawn "arandr")
   , ("M-n", addName "Open Neovim"         $ spawn (myTerminal ++ " -e nvim"))
   , ("M-c", addName "Open cmus"         $ spawn (myTerminal ++ " -e cmus"))
+  , ("M-ñ", addName "Open Ranger"         $ spawn (myTerminal ++ " -e ranger"))
   , ("M-S-l", addName "Lock screen"         $ spawn "dm-lock")
   , ("M-/", addName "DTOS Help"                $ spawn "~/.local/bin/dtos-help")]
 
@@ -656,18 +647,18 @@ myKeys c =
   ^++^ subKeys "GridSelect"
   -- , ("C-g g", addName "Select favorite apps"     $ runSelectedAction' defaultGSConfig gsCategories)
   [ ("M-M1-<Return>", addName "Select favorite apps" $ spawnSelected'
-       $ gsGames ++ gsEducation ++ gsInternet ++ gsMultimedia ++ gsOffice ++ gsSettings ++ gsSystem ++ gsUtilities)
+       $ gsGames ++ gsInternet ++ gsMultimedia ++ gsOffice ++ gsSettings ++ gsSystem ++ gsUtilities ++ gsDevelop)
   , ("M-M1-c", addName "Select favorite apps"    $ spawnSelected' gsCategories)
   , ("M-M1-t", addName "Goto selected window"    $ goToSelected $ mygridConfig myColorizer)
   , ("M-M1-b", addName "Bring selected window"   $ bringSelected $ mygridConfig myColorizer)
   , ("M-M1-1", addName "Menu of games"           $ spawnSelected' gsGames)
-  , ("M-M1-2", addName "Menu of education apps"  $ spawnSelected' gsEducation)
-  , ("M-M1-3", addName "Menu of Internet apps"   $ spawnSelected' gsInternet)
-  , ("M-M1-4", addName "Menu of multimedia apps" $ spawnSelected' gsMultimedia)
-  , ("M-M1-5", addName "Menu of office apps"     $ spawnSelected' gsOffice)
-  , ("M-M1-6", addName "Menu of settings apps"   $ spawnSelected' gsSettings)
-  , ("M-M1-7", addName "Menu of system apps"     $ spawnSelected' gsSystem)
-  , ("M-M1-8", addName "Menu of utilities apps"  $ spawnSelected' gsUtilities)]
+  , ("M-M1-2", addName "Menu of Internet apps"   $ spawnSelected' gsInternet)
+  , ("M-M1-3", addName "Menu of multimedia apps" $ spawnSelected' gsMultimedia)
+  , ("M-M1-4", addName "Menu of office apps"     $ spawnSelected' gsOffice)
+  , ("M-M1-5", addName "Menu of settings apps"   $ spawnSelected' gsSettings)
+  , ("M-M1-6", addName "Menu of system apps"     $ spawnSelected' gsSystem)
+  , ("M-M1-7", addName "Menu of utilities apps"  $ spawnSelected' gsUtilities)
+  , ("M-M1-8", addName "Menu of develop apps"    $ spawnSelected' gsDevelop)]
 
   -- Emacs (SUPER-e followed by a key)
   ^++^ subKeys "Emacs"
