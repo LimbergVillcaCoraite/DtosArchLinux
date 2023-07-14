@@ -129,3 +129,4 @@ nvchad
 * https://archlinux.org/
 * https://archives.haskell.org/projects.haskell.org/xmobar/#example-for-using-the-dbus-ipc-interface-with-xmonad
 * https://github.com/NvChad/NvChad
+* https://www.youtube.com/watch?v=3noK4GTmyMw
