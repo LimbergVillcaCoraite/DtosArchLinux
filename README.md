@@ -76,7 +76,12 @@ Link: https://wiki.archlinux.org/title/installation_guide
 
 ### Basic shortcuts
 xmonad
-* mod + return      open Terminal
+
+| Shortcut                                    | Action         |
+|---------------------------------------------|----------------|
+| mod + enter                                 |  Open terminal |
+| mod + shift + enter                         |  Open Dmenu    |
+
 ---
 kitty
 ---
