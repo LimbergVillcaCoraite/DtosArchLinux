@@ -48,6 +48,9 @@ Windows Manager base haskell
 ### Instructions to install ArchLinux
 Link: https://wiki.archlinux.org/title/installation_guide
 
+<h2 align="center">Programs</h2>
+<p align="center"> -- Install --</p>
+
 ### Dedendencies and packages
 - Enviroment: xmonad, xmobar
 - Menu: dmenu
