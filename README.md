@@ -24,10 +24,10 @@
 Windows Manager base haskell
 ---
 ### Hardware
-- Computer: Asus k556U
-- Processor: Intel Core i5-7200U
-- Memory: 8GB (DDR4)
-- HDD: 1TB
+- **Computer**: Asus k556U
+- **Processor**: Intel Core i5-7200U
+- **Memory**: 8GB (DDR4)
+- **HDD**: 1TB
 
 ### Booteable usb
 - Pen drive: Sandisk 4GB
