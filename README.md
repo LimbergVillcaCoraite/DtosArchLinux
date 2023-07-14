@@ -23,8 +23,39 @@ Windows Manager base haskell
 ### Instructions to install ArchLinux
 Link: https://wiki.archlinux.org/title/installation_guide
 
-### Link de figma
-Link: https://www.figma.com/file/CanBImOwOGHBlJufhEXxYp/web?node-id=0%3A1&t=FaXLI8FHZe7yXSe1-1
+### Dedendencies and packages
+- Enviroment: xmonad, xmobar
+- Menu: dmenu
+- Package manager: pacman, paru
+- Multimedia:
+    * Video: mpv
+    * Music: cmus
+- Code editor:
+    - Inteface: Visual Studio Code
+    - Terminal: Neovim, nano, vim
+- Mtp reader: simple-mtpfs
+- Files: ranger
+- Wallpaper: nitrogen
+- Browser
+    - Interface: firefox, google-chrome
+    - Terminal: qutebrowser
+- Smartphone manager: scrcpy
+- Version manager: git
 ---
-### Link del proyecto deployado
-Link: https://limbergvillcacoraite.github.io/projectWeb/
+### Screenshots
+- Ranger + kitty
+![](https://github.com/LimbergVillcaCoraite/DtosArchLinux/blob/main/screen/maim-eDP1-20230713-155919.png)
+
+- Neovim + nvchad
+![](https://github.com/LimbergVillcaCoraite/DtosArchLinux/blob/main/screen/maim-eDP1-20230713-155947.png)
+
+- Terminal
+![](https://github.com/LimbergVillcaCoraite/DtosArchLinux/blob/main/screen/maim-eDP1-20230713-160003.png)
+
+- Multimonitor
+![](https://github.com/LimbergVillcaCoraite/DtosArchLinux/blob/main/screen/maim-full-20230713-155931.png)
+---
+### Reference
+* https://archlinux.org/
+* https://archives.haskell.org/projects.haskell.org/xmobar/#example-for-using-the-dbus-ipc-interface-with-xmonad
+* https://github.com/NvChad/NvChad
