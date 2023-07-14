@@ -46,7 +46,10 @@ Link: https://wiki.archlinux.org/title/installation_guide
 ---
 ### Basic shortcuts
 xmonad
+* mod + return      open Terminal
+---
 kitty
+---
 nvchad
 ---
 
