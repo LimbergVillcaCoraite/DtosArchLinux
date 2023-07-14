@@ -111,7 +111,10 @@ nvchad
 | ctrl + n                        |Open file manager|
 | win + space + v                            |Open terminal|
 
----
+
+<h2 align="center">Screenshot</h2>
+<p align="center"> --Package--</p>
+
 ### Screenshots
 - Ranger + kitty
 ![](https://github.com/LimbergVillcaCoraite/DtosArchLinux/blob/main/screen/maim-eDP1-20230713-155919.png)
@@ -124,7 +127,11 @@ nvchad
 
 - Multimonitor
 ![](https://github.com/LimbergVillcaCoraite/DtosArchLinux/blob/main/screen/maim-full-20230713-155931.png)
----
+
+
+<h2 align="center">Reference</h2>
+<p align="center"> --Other--</p>
+
 ### Reference
 * https://archlinux.org/
 * https://archives.haskell.org/projects.haskell.org/xmobar/#example-for-using-the-dbus-ipc-interface-with-xmonad
