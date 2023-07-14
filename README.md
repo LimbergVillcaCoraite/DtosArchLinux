@@ -101,6 +101,8 @@ kitty
 | ctrl + shift + z                            |Terminal window full screen|
 | ctrl + shift + w                        |Close terminal full screen|
 | ctrl + shift + q                            |Close terminal|
+| ctrl + shift + t                        |Open tab|
+| ctrl + shift + left/right                            |Neighboring tab|
 
 
 nvchad
