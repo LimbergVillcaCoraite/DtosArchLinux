@@ -2,7 +2,13 @@
 <p><em>Enviroment <a href="https://github.com/LimbergVillcaCoraite/DtosArchLinux" align="center">GitHub Repository</a> (GitHub)</em></p>
 
 <h1 align="center">XMonad Starter Kit</h1>
+
+<p align="center">
+    <img src="screen/maim-eDP1-20230713-155834.png" align="center" width="400">
+    <img src="screen/maim-eDP1-20230713-155919.png" align="center" width="400"> 
+</p>
 </div>
+
 ![](https://github.com/LimbergVillcaCoraite/DtosArchLinux/blob/main/screen/maim-eDP1-20230713-155834.png)
 
 ### About project
