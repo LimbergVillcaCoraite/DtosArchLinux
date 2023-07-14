@@ -34,6 +34,9 @@ Windows Manager base haskell
 ### Booteable usb
 - Pen drive: Sandisk 4GB
 
+<h2 align="center">Install ArchLinux</h2>
+<p align="center"> -- Initial --</p>
+
 ### Instructions to boot usb
 1. Download rufus on another computer.
     Link: https://rufus.ie/es/
