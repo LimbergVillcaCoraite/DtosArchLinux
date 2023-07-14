@@ -92,11 +92,17 @@ xmonad
 | mod + shift + l                             |  Lock screen   |
 | mod + space                                 |  Full screen   |
 
----
+
 kitty
----
+
+| Shortcut                                    | Action         |
+|---------------------------------------------|----------------|
+| ctrl + shift + enter                        |Open terminal window|
+| ctrl + shift + z                            |Terminal window full screen|
+
+
 nvchad
----
+
 
 ---
 ### Screenshots
