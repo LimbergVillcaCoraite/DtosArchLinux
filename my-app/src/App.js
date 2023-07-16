@@ -1,7 +1,9 @@
-export default function AppendMode(){
-  return (
-    <>
-      <h1>React demo</h1>
-    </>
-  )
+import Header from "./Header";
+
+function App() {
+  return <div>
+    <Header/>
+  </div>
 }
+
+export default App;
