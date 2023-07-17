@@ -128,6 +128,7 @@ ${color1}[S]+p, e${alignr}${color2}dm-confedit${color}
 ${color1}[S]+p, m${alignr}${color2}dm-man${color}
 ${color1}[S]+p, o${alignr}${color2}dm-bookman${color}
 ${color1}[S]+p, s${alignr}${color2}dm-websearch${color}
+${color1}[S]+p, u${alignr}${color2}dm-usbmount${color}
 ${color1}${hr}${color}
 ${color1}[S]+[SHIFT]+r${alignr}${color2}restart xmonad${color}
 ${color1}[S]+[SHIFT]+q${alignr}${color2}quit xmonad${color}

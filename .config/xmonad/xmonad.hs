@@ -560,6 +560,7 @@ myKeys c =
   [ ("M-p h", addName "List all dmscripts"     $ spawn "dm-hub")
   , ("M-p a", addName "Choose ambient sound"   $ spawn "dm-sounds")
   , ("M-p b", addName "Set background"         $ spawn "dm-setbg")
+  , ("M-p u", addName "Mount usb"         $ spawn "dm-usbmount -d")
   , ("M-p c", addName "Choose color scheme"    $ spawn "~/.local/bin/dtos-colorscheme")
   , ("M-p C", addName "Pick color from scheme" $ spawn "dm-colpick")
   , ("M-p e", addName "Edit config files"      $ spawn "dm-confedit")
