@@ -1,9 +1,11 @@
 import React from 'react'
 import {AppBar, Tab, Tabs, Toolbar} from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import './Header.css'
 
-const Header = () => {
+const Footer = () => {
   return (
+    <div className='Footer'>
     <React.Fragment>
         <AppBar>
             <Toolbar>
@@ -15,7 +17,8 @@ const Header = () => {
             </Toolbar>
         </AppBar>
     </React.Fragment>
+    </div>
   )
 }
 
-export default Header
+export default Footer
