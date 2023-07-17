@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/DtosArchLinux/static/css/main.31d6cfe0.css",
-    "main.js": "/DtosArchLinux/static/js/main.8dd7a988.js",
+    "main.css": "/DtosArchLinux/static/css/main.277660e9.css",
+    "main.js": "/DtosArchLinux/static/js/main.d45390fb.js",
     "static/js/787.28cb0dcd.chunk.js": "/DtosArchLinux/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/DtosArchLinux/index.html",
-    "main.8dd7a988.js.map": "/DtosArchLinux/static/js/main.8dd7a988.js.map",
+    "main.277660e9.css.map": "/DtosArchLinux/static/css/main.277660e9.css.map",
+    "main.d45390fb.js.map": "/DtosArchLinux/static/js/main.d45390fb.js.map",
     "787.28cb0dcd.chunk.js.map": "/DtosArchLinux/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
-    "static/js/main.8dd7a988.js"
+    "static/css/main.277660e9.css",
+    "static/js/main.d45390fb.js"
   ]
 }
