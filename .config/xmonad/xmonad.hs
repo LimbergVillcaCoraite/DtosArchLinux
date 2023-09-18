@@ -100,8 +100,8 @@ myEmacs :: String
 myEmacs = "emacsclient -c -a 'emacs' "  -- Makes emacs keybindings easier to type
 
 myEditor :: String
--- myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
-myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor
+myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
+-- myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor
 
 myBorderWidth :: Dimension
 myBorderWidth = 2           -- Sets border width for windows
@@ -214,75 +214,88 @@ runSelectedAction' conf actions = do
 
 gsCategories =
   [ ("Games",      "xdotool key super+alt+1")
-  , ("Internet",   "xdotool key super+alt+2")
-  , ("Multimedia", "xdotool key super+alt+3")
-  , ("Office",     "xdotool key super+alt+4")
-  , ("Settings",   "xdotool key super+alt+5")
-  , ("System",     "xdotool key super+alt+6")
-  , ("Utilities",  "xdotool key super+alt+7")
-  , ("Develop",    "xdotool key super+alt+8")
+  , ("Education",  "xdotool key super+alt+2")
+  , ("Internet",   "xdotool key super+alt+3")
+  , ("Multimedia", "xdotool key super+alt+4")
+  , ("Office",     "xdotool key super+alt+5")
+  , ("Settings",   "xdotool key super+alt+6")
+  , ("System",     "xdotool key super+alt+7")
+  , ("Utilities",  "xdotool key super+alt+8")
   ]
 
 gsGames =
-  [ ("OpenArena", "openarena")
+  [ ("0 A.D.", "0ad")
+  , ("Battle For Wesnoth", "wesnoth")
+  , ("OpenArena", "openarena")
+  , ("Sauerbraten", "sauerbraten")
   , ("Steam", "steam")
-  , ("SuperTuxKart", "supertuxkart")
   , ("Unvanquished", "unvanquished")
+  , ("Xonotic", "xonotic-glx")
+  ]
+
+gsEducation =
+  [ ("GCompris", "gcompris-qt")
+  , ("Kstars", "kstars")
+  , ("Minuet", "minuet")
+  , ("Scratch", "scratch")
   ]
 
 gsInternet =
-  [ ("Discord", "discord")
+  [ ("Brave", "brave")
+  , ("Discord", "discord")
+  , ("Element", "element-desktop")
   , ("Firefox", "firefox")
+  , ("LBRY App", "lbry")
+  , ("Mailspring", "mailspring")
+  , ("Nextcloud", "nextcloud")
   , ("Qutebrowser", "qutebrowser")
+  , ("Transmission", "transmission-gtk")
   , ("Zoom", "zoom")
   ]
 
 gsMultimedia =
   [ ("Audacity", "audacity")
   , ("Blender", "blender")
-  , ("Cmus", (myTerminal ++ " -e cmus"))
+  , ("Deadbeef", "deadbeef")
   , ("Kdenlive", "kdenlive")
   , ("OBS Studio", "obs")
+  , ("VLC", "vlc")
   ]
 
 gsOffice =
   [ ("Document Viewer", "evince")
   , ("LibreOffice", "libreoffice")
+  , ("LO Base", "lobase")
+  , ("LO Calc", "localc")
+  , ("LO Draw", "lodraw")
+  , ("LO Impress", "loimpress")
+  , ("LO Math", "lomath")
+  , ("LO Writer", "lowriter")
   ]
 
 gsSettings =
   [ ("ARandR", "arandr")
   , ("ArchLinux Tweak Tool", "archlinux-tweak-tool")
+  , ("Customize Look and Feel", "lxappearance")
   , ("Firewall Configuration", "sudo gufw")
   ]
 
 gsSystem =
   [ ("Alacritty", "alacritty")
   , ("Bash", (myTerminal ++ " -e bash"))
-  , ("Bash", (myTerminal ++ " -e bash"))
-  , ("Pacmixer", (myTerminal ++ " -e pacmixer"))
+  , ("Htop", (myTerminal ++ " -e htop"))
   , ("Fish", (myTerminal ++ " -e fish"))
   , ("PCManFM", "pcmanfm")
   , ("VirtualBox", "virtualbox")
-  , ("VMWare", "vmware")
   , ("Virt-Manager", "virt-manager")
   , ("Zsh", (myTerminal ++ " -e zsh"))
   ]
 
 gsUtilities =
   [ ("Emacs", "emacs")
-  , ("Neovim", (myTerminal ++ " -e nvim"))
   , ("Emacsclient", "emacsclient -c -a 'emacs'")
   , ("Nitrogen", "nitrogen")
   , ("Vim", (myTerminal ++ " -e vim"))
-  ]
-
-gsDevelop =
-  [ ("Visual Studio Code", "code")
-  , ("Neovim", (myTerminal ++ " -e nvim"))
-  , ("Eclipse", "eclipse")
-  , ("Intellij idea", "intellij-idea-ultimate-edition")
-  , ("Postman", "postman")
   ]
 
 myScratchPads :: [NamedScratchpad]
@@ -502,11 +515,9 @@ myKeys c =
   , ("M-S-q", addName "Quit XMonad"            $ spawn "dm-logout")
   , ("M-S-c", addName "Kill focused window"    $ kill1)
   , ("M-S-a", addName "Kill all windows on WS" $ killAll)
-  -- , ("M-S-<Return>", addName "Run prompt"      $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
-  , ("M-S-<Return>", addName "Run prompt"      $ spawn "~/.local/bin/dm-run")
-  -- (edit shortcuts personal)
-  , ("M-<F6>", addName "Bright more"   $ spawn "brightnessctl set +10%")
-  , ("M-<F5>", addName "Bright delete"   $ spawn "brightnessctl set 10%-")
+  , ("M-S-<Return>", addName "Run prompt"      $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
+  , ("<F6>", addName "Bright more"   $ spawn "brightnessctl set +1%")
+  , ("<F5>", addName "Bright delete"   $ spawn "brightnessctl set 1%-")
   , ("M-v", addName "Open virtualbox"   $ spawn "virtualbox")
   , ("M-w", addName "Open vmware"   $ spawn "vmware")
   , ("M-a", addName "Open arandr"   $ spawn "arandr")
@@ -514,6 +525,7 @@ myKeys c =
   , ("M-c", addName "Open cmus"         $ spawn (myTerminal ++ " -e cmus"))
   , ("M-ñ", addName "Open Ranger"         $ spawn (myTerminal ++ " -e ranger"))
   , ("M-S-l", addName "Lock screen"         $ spawn "dm-lock")
+  , ("M-S-b", addName "Toggle bar show/hide"   $ sendMessage ToggleStruts)
   , ("M-/", addName "DTOS Help"                $ spawn "~/.local/bin/dtos-help")]
 
   ^++^ subKeys "Switch to workspace"
@@ -648,18 +660,18 @@ myKeys c =
   ^++^ subKeys "GridSelect"
   -- , ("C-g g", addName "Select favorite apps"     $ runSelectedAction' defaultGSConfig gsCategories)
   [ ("M-M1-<Return>", addName "Select favorite apps" $ spawnSelected'
-       $ gsGames ++ gsInternet ++ gsMultimedia ++ gsOffice ++ gsSettings ++ gsSystem ++ gsUtilities ++ gsDevelop)
+       $ gsGames ++ gsEducation ++ gsInternet ++ gsMultimedia ++ gsOffice ++ gsSettings ++ gsSystem ++ gsUtilities)
   , ("M-M1-c", addName "Select favorite apps"    $ spawnSelected' gsCategories)
   , ("M-M1-t", addName "Goto selected window"    $ goToSelected $ mygridConfig myColorizer)
   , ("M-M1-b", addName "Bring selected window"   $ bringSelected $ mygridConfig myColorizer)
   , ("M-M1-1", addName "Menu of games"           $ spawnSelected' gsGames)
-  , ("M-M1-2", addName "Menu of Internet apps"   $ spawnSelected' gsInternet)
-  , ("M-M1-3", addName "Menu of multimedia apps" $ spawnSelected' gsMultimedia)
-  , ("M-M1-4", addName "Menu of office apps"     $ spawnSelected' gsOffice)
-  , ("M-M1-5", addName "Menu of settings apps"   $ spawnSelected' gsSettings)
-  , ("M-M1-6", addName "Menu of system apps"     $ spawnSelected' gsSystem)
-  , ("M-M1-7", addName "Menu of utilities apps"  $ spawnSelected' gsUtilities)
-  , ("M-M1-8", addName "Menu of develop apps"    $ spawnSelected' gsDevelop)]
+  , ("M-M1-2", addName "Menu of education apps"  $ spawnSelected' gsEducation)
+  , ("M-M1-3", addName "Menu of Internet apps"   $ spawnSelected' gsInternet)
+  , ("M-M1-4", addName "Menu of multimedia apps" $ spawnSelected' gsMultimedia)
+  , ("M-M1-5", addName "Menu of office apps"     $ spawnSelected' gsOffice)
+  , ("M-M1-6", addName "Menu of settings apps"   $ spawnSelected' gsSettings)
+  , ("M-M1-7", addName "Menu of system apps"     $ spawnSelected' gsSystem)
+  , ("M-M1-8", addName "Menu of utilities apps"  $ spawnSelected' gsUtilities)]
 
   -- Emacs (SUPER-e followed by a key)
   ^++^ subKeys "Emacs"
@@ -682,6 +694,7 @@ myKeys c =
   , ("<XF86AudioMute>", addName "Toggle audio mute"   $ spawn "amixer set Master toggle")
   , ("<XF86AudioLowerVolume>", addName "Lower vol"    $ spawn "amixer set Master 5%- unmute")
   , ("<XF86AudioRaiseVolume>", addName "Raise vol"    $ spawn "amixer set Master 5%+ unmute")
+  , ("<XF86HomePage>", addName "Open home page"       $ spawn (myBrowser ++ " https://www.youtube.com/c/DistroTube"))
   , ("<XF86Search>", addName "Web search (dmscripts)" $ spawn "dm-websearch")
   , ("<XF86Mail>", addName "Email client"             $ runOrRaise "thunderbird" (resource =? "thunderbird"))
   , ("<XF86Calculator>", addName "Calculator"         $ runOrRaise "qalculate-gtk" (resource =? "qalculate-gtk"))
