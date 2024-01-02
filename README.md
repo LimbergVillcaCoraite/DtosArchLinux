@@ -30,6 +30,7 @@ Windows Manager base haskell
 - Processor: Intel Core i5-7200U
 - Memory: 8GB
 - HDD: 1TB
+- SSD: 500GB
 
 ### Booteable usb
 - Pen drive: Sandisk 4GB
