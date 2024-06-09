@@ -221,6 +221,7 @@ gsCategories =
   , ("Settings",   "xdotool key super+alt+6")
   , ("System",     "xdotool key super+alt+7")
   , ("Utilities",  "xdotool key super+alt+8")
+  , ("Develop",    "xdotool key super+alt+9")
   ]
 
 gsGames =
@@ -231,6 +232,18 @@ gsGames =
   , ("Steam", "steam")
   , ("Unvanquished", "unvanquished")
   , ("Xonotic", "xonotic-glx")
+  ]
+
+gsDevelop =
+  [ ("Intellij-idea", "intellij-idea-ultimate-edition")
+   ,("Vscode", "code")
+   ,("Jetbrains-aqua", "aqua")
+   ,("Pycharm-idea", "pycharm-professional")
+   ,("Jetbrains-fleet", "jetbrains-fleet")
+   ,("Dbeaver", "dbeaver")
+   ,("Jetbrains-aqua", "aqua")
+   ,("Jebrains-datagrip", "datagrip")
+   ,("Neovim", "nvim")
   ]
 
 gsEducation =
@@ -486,9 +499,12 @@ myManageHook = composeAll
 
 soundDir = "/opt/dtos-sounds/" -- The directory that has the sound files
 
-startupSound  = soundDir ++ "startup-01.mp3"
-shutdownSound = soundDir ++ "shutdown-01.mp3"
-dmenuSound    = soundDir ++ "menu-01.mp3"
+startupSound  = soundDir ++ ""
+--startupSound  = soundDir ++ "startup-01.mp3"
+shutdownSound = soundDir ++ ""
+--shutdownSound = soundDir ++ "shutdown-01.mp3"
+dmenuSound    = soundDir ++ ""
+--dmenuSound    = soundDir ++ "menu-01.mp3"
 
 subtitle' ::  String -> ((KeyMask, KeySym), NamedAction)
 subtitle' x = ((0,0), NamedAction $ map toUpper
@@ -671,6 +687,7 @@ myKeys c =
   , ("M-M1-5", addName "Menu of office apps"     $ spawnSelected' gsOffice)
   , ("M-M1-6", addName "Menu of settings apps"   $ spawnSelected' gsSettings)
   , ("M-M1-7", addName "Menu of system apps"     $ spawnSelected' gsSystem)
+  , ("M-M1-9", addName "Menu of develop apps"     $ spawnSelected' gsDevelop)
   , ("M-M1-8", addName "Menu of utilities apps"  $ spawnSelected' gsUtilities)]
 
   -- Emacs (SUPER-e followed by a key)
